@@ -61,7 +61,8 @@ header.sticky {
 header,
 fieldset,
 footer,
-footer .socials {
+footer .socials,
+#theme label {
   display: flex;
   align-items: center;
 }
@@ -225,27 +226,25 @@ legend h1,
   height: 20px;
   background-color: #3f3118;
   border-radius: 10px;
-  padding: 5px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   position: relative;
+  padding: 0 5px;
 }
 
 .ball {
   background-color: #bebebe;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  left: -1px;
+  translate: 0 -50%;
   transition: translate 0.2s linear;
 }
 
 #checkbox:checked + label .ball {
-  translate: 20px;
+  translate: 19px -50%;
 }
 
 /* input[type="date"]::-webkit-calendar-picker-indicator {
