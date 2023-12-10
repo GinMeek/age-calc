@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Age Calculator</title>
+</head>
+
+<body>
+  <main class="container">
+    <form action="" method="post" name="getDob">
+      <fieldset>
+        <legend>
+          <h1>Age Calculator</h1>
+        </legend>
+        <label for="name">Your name</label>
+        <input type="text" name="name" id="name" placeholder="Enter name (optional)" />
+        <br /><br />
+        <label for="dob">Your Date of birth <span>*</span></label>
+        <input type="date" name="dob" id="dob" placeholder="MM/DD/YYYY" required />
+        <button type="submit">Get Result</button>
+      </fieldset>
+    </form>
+
+    <div id="theme">
+      <h4>Dark mode:</h4>
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      <label for="checkbox">
+        <p class="on">o</p>
+        <p class="off">x</p>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <div class="result" id="result">
+      <h3 class="result_text"></h3>
+      <hr />
+      <div class="postscript">
+        <p class="result_text remainder"></p>
+        <br />
+        <p class="result_text born_day"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/dob_class.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
