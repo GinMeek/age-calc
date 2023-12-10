@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #141414;
+  --light-color: #ececec;
+  --error-bg: #fca5a5;
+  --blue: #2e2eb8;
+  --red: #a51a1a;
+  --dark-blue: #171769;
+  --green: #0b5e0b;
+  --lt-green: #b2f1b2;
+  --ft-hd-dark: #c8bfdb;
+  --ft-hd-lite: #63567e;
+}
+
+body.dark-mode {
+  --dark-color: #ececec;
+  --light-color: #141414;
+  --dark-blue: #6f6fff;
+  --blue: #3b1691;
+  --green: #90ee90;
+  --lt-green: #0f470f;
+  --ft-hd-lite: #c8bfdb;
+  --ft-hd-dark: #63567e;
+}
+
+body {
+  background: var(--light-color);
+  color: var(--dark-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 1.3rem;
+}
+
+main,
+header,
+footer {
+  transition: all 0.3s linear;
+}
+
+header.sticky + main {
+  padding-top: 62px;
+}
+
+header.sticky {
+  background-color: var(--ft-hd-dark);
+  color: var(--ft-hd-lite);
+}
+
+.container,
+#theme,
+header,
+fieldset,
+footer,
+footer .socials {
+  display: flex;
+  align-items: center;
+}
+
+.container,
+header {
+  justify-content: space-around;
+}
+
+.container,
+fieldset,
+footer {
+  flex-direction: column;
+}
+
+.container {
+  min-width: 100%;
+  padding: 25px 15px 128px;
+  background-color: var(--light-color);
+}
+
+footer .socials {
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+label span {
+  color: var(--red);
+}
+
+input {
+  color: var(--dark-color);
+  border-width: 1px;
+}
+
+input,
+button {
+  font-size: 15px;
+  transition: 0.2s linear;
+}
+
+input,
+button,
+fieldset {
+  padding: 10px;
+  border-color: var(--blue);
+  margin: 10px;
+  background: transparent;
+}
+
+input,
+button,
+fieldset,
+.result {
+  border-radius: 10px;
+}
+
+button {
+  background-color: var(--blue);
+  cursor: pointer;
+  border: none;
+  color: var(--light-color);
+}
+
+.dark-mode button {
+  color: var(--dark-color);
+}
+
+button:hover {
+  background-color: var(--dark-blue);
+}
+
+input:hover,
+button:hover {
+  scale: 1.05;
+}
+
+.dark-mode button {
+  background-color: var(--blue);
+}
+
+.dark-mode button:hover {
+  background: transparent;
+  border: 1px solid var(--blue);
+}
+
+form {
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #636363, -3px -3px 10px #636363;
+}
+
+fieldset {
+  min-height: 380px;
+  padding: 25px 35px 15px;
+}
+
+legend {
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: cursive;
+  color: var(--dark-blue);
+}
+
+legend h1,
+.happy {
+  letter-spacing: 3px;
+}
+
+.result {
+  display: none;
+  padding: 2rem;
+  background-color: var(--lt-green);
+}
+
+.result_text {
+  line-height: 1.7rem;
+}
+
+.error {
+  background: var(--error-bg);
+}
+
+.error span {
+  color: var(--red);
+}
+
+.happy {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+.postscript {
+  padding-top: 10px;
+}
+
+.result {
+  margin-top: 40px;
+}
+
+#theme h4 {
+  margin-right: 1.5rem;
+}
+
+#checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+#theme label p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#theme label {
+  width: 40px;
+  height: 20px;
+  background-color: #3f3118;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.ball {
+  background-color: #bebebe;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: translate 0.2s linear;
+}
+
+#checkbox:checked + label .ball {
+  translate: 20px;
+}
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+} */
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 0;
+  text-align: center;
+  gap: 0.4rem;
+  color: var(--ft-hd-lite);
+  background-color: var(--ft-hd-dark);
+}
+
+footer span {
+  font-size: 1.3rem;
+  color: #d3001c;
+}
+
+footer i {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+}
+
+footer i.fa-square-instagram:hover {
+  color: #e4405f;
+}
+
+footer i.fa-facebook:hover {
+  color: #1877f2;
+}
+
+footer i.fa-linkedin:hover {
+  color: #0a66c2;
+}
+
+footer i.fa-square-x-twitter:hover,
+footer i.fa-github:hover {
+  color: #000;
+}
